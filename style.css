@@ -327,7 +327,7 @@ cursor: pointer;
 
 @keyframes typing{
   from {width: 0%}
-  to { width: 65%}
+  to { width: 75%}
 }
 @keyframes blinking{
   from, to {border-color: transparent}
