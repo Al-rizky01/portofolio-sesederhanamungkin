@@ -59,17 +59,25 @@
   <!-- navbar -->
   <div class="nav">
     <div class="contain">
-      <a href="" class="tgl"><b>X</b></a>
-     <div class="flex">
-         <h2>Muhammad alrizky</h2>
-        
-         <ul class="desktop">
-             <li><a href="#">Home</a></li>
-             <li><a href="#About">About</a></li>
-             <li><a href="#Projects">Projects</a></li>
-             <li><a href="#Contact">Contact</a></li>
+      <!--  32 -->
 
-         </ul>
+     <div class="flex">
+       <h2>Muhammad alrizky</h2>
+       <ul class="desktop menu">
+         <li><a class="hide" href="#">Home</a></li>
+         <li><a class="hide" href="#About">About</a></li>
+         <li><a class="hide" href="#Projects">Projects</a></li>
+         <li><a class="hide" href="#Contact">Contact</a></li>
+        
+      </ul>
+         <ul class="sidebar">
+           <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+           <li><a href="#">Blog</a></li>
+           <li><a href="#">Products</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Forum</a></li>
+           <li><a href="#">Login</a></li>
+          </ul>
      </div>
  </div>
   </div>
@@ -85,7 +93,7 @@
           <P>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</P>
           <!-- <a href="#Projects" class="btn-header">PROJECTS</a> -->
 
-          <a href="#Projects" class="button">
+          <a href="#Projects" class="button projek">
               <div class="box"></div>
               
               <div class="box">P</div>
@@ -294,6 +302,26 @@
 
                 }
             })
+
+        
   </script>
+  <!-- <script>
+    function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('show');
+}
+
+  </script> -->
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
 </body>
 </html>
+
