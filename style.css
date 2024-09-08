@@ -1,4 +1,8 @@
  
+html{
+  overflow-x: hidden;
+  min-height: 100vh;
+}
 * {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -9,13 +13,13 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
- 
+
 }
 /* body{
 /* transition-duration: all 2s; */
 body{
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 100vh;
+ 
   overflow-x: hidden;
 
 }
@@ -40,6 +44,7 @@ div{
   max-height: min-content;
   overflow: hidden;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .desktop{
@@ -1348,7 +1353,7 @@ width: 75%;
     box-shadow: 0 10px 20px rgba(0,0,0,.2);
     padding: 2.6rem 0;
     position: fixed;
-    width: 100%;
+    width: 100px;
     z-index: 9999;
     top: 0;
     left: 0;
@@ -1359,6 +1364,9 @@ width: 75%;
     max-width: 100%;
   }
 }
+
+
+
 
 
 
