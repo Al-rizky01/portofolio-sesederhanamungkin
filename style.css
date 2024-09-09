@@ -71,6 +71,7 @@ div{
   width: 60px;
   border-radius: 50%;
   border: 2.8px solid black;
+  margin-top: 10px;
 }
 
 
@@ -156,7 +157,7 @@ border: 5px solid #ffff;
   height: 90px;
   
   z-index: 99999;
-  top: 10px;
+  
   left:65px;
   right: 0;
   justify-content: space-between;
@@ -1339,8 +1340,9 @@ width: 75%;
     height: 100px;
     width: 100px;
     z-index: 9999999;
-    background-color: red;
+    /* background-color: red; */
     margin-left: 80%;
+    margin-top: 75px;
     position: absolute;
   }
   .flex h2{
@@ -1348,12 +1350,12 @@ width: 75%;
   }
   .nav{
     /* background-color: #fff; */
-    background-color: rgba(255, 255, 255, 0.123);
+    background-color: rgba(255, 255, 255, 0.068);
     /* border-bottom: black; */
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
-    padding: 2.6rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.137);
+    padding: 1.8rem 0;
     position: fixed;
-    width: 100px;
+    width: 100%;
     z-index: 9999;
     top: 0;
     left: 0;
@@ -1362,8 +1364,55 @@ width: 75%;
     max-height: min-content;
     overflow: hidden;
     max-width: 100%;
+    border-bottom: .1px solid black;
+  }
+  .toggle {
+    display: flex;
+    position: fixed;
+    /* align-items: flex-end; */
+    /* background: #ffffff00; */
+   
+    margin-right: 0;
+    padding-right: 0;
+    transition: 0.5s ease-in-out;
+    width: 100px;
+    height: 100px;
+    z-index: 99999;
+    
+    left: 65px;
+    right: 0;
+    justify-content: space-between;}
+  .logo {
+    cursor: pointer;
+    width: 50px;
+    margin-top: 5px;
+    border-radius: 50%;
+    border: 2.8px solid black;}
+
+    .content-home h1 {
+      font-size: 2.5rem;
+      width: 92vw;
+      margin: 0px auto;
+      padding-right: 0;
+      margin-left: -5px;
+      margin-top: 150px;
+      margin-bottom: 500px;
+  animation: 
+  typing 3.5s steps(40,end),
+  blinking 0.5s ease infinite;
+  }
+  @keyframes typing{
+    from {width: 0%}
+    to { width: 75%}
+  }
+  @keyframes blinking{
+    from, to {border-color: transparent}
+    15% {border-color: #ffc456}
   }
 }
+
+
+
 
 
 
