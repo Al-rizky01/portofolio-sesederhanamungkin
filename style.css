@@ -668,6 +668,7 @@ input, textarea {
   font-weight: 600;
   margin-top: 1rem;
   width: 20%;
+  cursor: pointer;
   border-width: initial;
   border-style: none;
   border-color: initial;
@@ -687,8 +688,8 @@ input, textarea {
    border-radius: 5px;
 }
 .projek{
-  width: 200px;
-  margin-left: 25%;
+  width: 230px;
+ margin-left: 42%;
 }
 
 .box {
@@ -776,7 +777,8 @@ margin-bottom: 10%;
   align-items: center;
   height: 100%;
   position: absolute;
-  margin-top: 58%;
+  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .social .social-item {
@@ -1328,6 +1330,31 @@ width: 75%;
   display: none;
 }
 
+.typing-effect {
+  font-family: monospace;
+  font-size: 20px;
+  white-space: nowrap; /* Agar teks tidak terputus ke baris baru */
+  overflow: hidden; /* Sembunyikan teks yang belum ditampilkan */
+  border-right: 2px solid; /* Menambahkan kursor seperti sedang mengetik */
+  width: 0;
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Animasi mengetik */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Animasi kursor berkedip */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+
+
+
 
 
 /* Responsive for tablets (portrait) */
@@ -1388,6 +1415,26 @@ width: 75%;
     margin-top: 5px;
     border-radius: 50%;
     border: 2.8px solid black;}
+  
+    .sider{
+      cursor: pointer;
+    }
+    .siderx{
+      margin-top: 20px;
+      margin-left: 10px;
+      margin-bottom: 50px;
+    }
+    .sidebar .side-an {
+      padding-top: 15px;
+      padding-left: 25px;
+      transition: transform 0.5s ease;
+    }
+    
+    .sidebar .side-an:hover {
+      color: #f9a813;
+      transform: translateX(20px); /* Text akan bergerak ke kanan sejauh 20px */
+    }
+    
 
     .content-home h1 {
       font-size: 2.5rem;
@@ -1409,7 +1456,66 @@ width: 75%;
     from, to {border-color: transparent}
     15% {border-color: #ffc456}
   }
+  form{
+    background-color: rgb(225, 225, 225);
+    box-shadow: rgba(0, 0, 0, 0.445) 0px 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 5px;
+    gap: 1.5rem;
+    margin: auto;
+    padding: 3rem;
+    
+  }
+  .btn-input{
+    background-color: rgb(250, 207, 15);
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    margin-top: 1rem;
+    width: 140px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+    outline: none;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,.3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  position: relative;
+  width: 30rem;
+  height: 15rem;
+  background: #ffffff00;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  --gradient: linear-gradient(to bottom, #ffdc9c, #ffc456, #f4000052);
+  --color: #ffc964;
+  margin-left: 100px;
+  margin-top: 10px;
+  
+  /* box-shadow: rgba(0, 0, 0, 0.245) 0px 1rem 1rem; */
+  }
+  .projek{
+    margin-left: 120px;
+  }
+}
+
+
+
+
+
 
 
 
