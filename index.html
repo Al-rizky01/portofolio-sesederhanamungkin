@@ -62,6 +62,7 @@
       <!--  32 -->
 
      <div class="flex">
+       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
        <h2>Muhammad alrizky</h2>
        <ul class="desktop menu">
          <li><a class="hide" href="#">Home</a></li>
@@ -70,13 +71,12 @@
          <li><a class="hide" href="#Contact">Contact</a></li>
         
       </ul>
-         <ul class="sidebar">
+         <ul class="  sidebar">
            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-           <li><a href="#">Blog</a></li>
-           <li><a href="#">Products</a></li>
-           <li><a href="#">About</a></li>
-           <li><a href="#">Forum</a></li>
-           <li><a href="#">Login</a></li>
+           <li><a  href="#">Home</a></li>
+           <li><a  href="#About">About</a></li>
+           <li><a  href="#Projects">Projects</a></li>
+           <li><a href="#Contact">Contact</a></li>
           </ul>
      </div>
  </div>
@@ -315,13 +315,24 @@
     <script>
       function showSidebar(){
         const sidebar = document.querySelector('.sidebar')
+        const menubut = document.querySelector('.menu-button')
+        menubut.style.display = 'none'
         sidebar.style.display = 'flex'
+        document.addEventListener('click', function (e) {
+                if (!document.querySelector('.menu-button').contains(e.target) && !toggle.contains(e.target)) {
+                  document.querySelector('.sidebar').style.display = 'none'
+                    // toggle.classList.remove('active');
+                    const menubut = document.querySelector('.menu-button')
+                    menubut.style.display = 'flex'  
+                }})
       }
       function hideSidebar(){
-        const sidebar = document.querySelector('.sidebar')
+        const sidebar = document.querySelector('.sidebar')   
+        const menubut = document.querySelector('.menu-button')
+        menubut.style.display = 'flex'  
         sidebar.style.display = 'none'
       }
+     
     </script>
 </body>
 </html>
-
