@@ -964,8 +964,29 @@ margin-bottom: 10%;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-top: 3vw;
   margin-bottom: 7vw;
-  background-image: url(Screenshot.png);
+  -webkit-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+/* card image projek */
+.cp_1{
+  background-image: url("assets/project_blog.png");
+background-position: center;
+background-size: cover;
+}
+.cp_2{
+  background-image: url("assets/project_wix.png");
+  background-position: center;
+background-size: cover;
+}.cp_3{
+  background-image: url("assets/project_wordp.png");
+  background-position: center;
+background-size: cover;
+}
+
+/*  */
+
 
 .card svg {
 width: 48px;
@@ -1535,8 +1556,13 @@ width: 75%;
   margin-top: 3vw;
   margin-bottom: 0vw;
   margin-left: -5vw;
-  background-image: url("Screenshot.png");
+  
   }
+/* card projek image */
+
+
+
+/*  */
 .notification {
   display: flex;
   flex-direction: column;
@@ -1570,16 +1596,6 @@ width: 75%;
   display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
