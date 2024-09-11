@@ -88,7 +88,7 @@
     <div class="contain">
       <div class="content-home">
           <div class="type">
-            <h1>HEY<span style="margin-left: 10px;">I'M<span style="margin-left: 10px;">MUHAMMAD<span style="margin-left: 10px;">ALRIZKY<span style="margin-left: 10px;">WIJAYANTO</h1>
+            <h1 id="responsiveText">HEY<span style="margin-left: 10px;">I'M<span style="margin-left: 10px;">MUHAMMAD<span style="margin-left: 10px;">ALRIZKY<span style="margin-left: 10px;">WIJAYANTO</h1>
             </div>
           <P>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</P>
           <!-- <a href="#Projects" class="btn-header">PROJECTS</a> -->
@@ -370,6 +370,25 @@ function hideSidebar(){
     document.getElementById('close-btn').addEventListener('click', function() {
       document.getElementById('success-message').style.display = 'none'; // Menyembunyikan notifikasi
     });
+  </script>
+  <script>
+    // JavaScript to change the text when screen width is less than 768px
+    function updateText() {
+      const h1 = document.getElementById('responsiveText');
+      if (window.innerWidth < 768) {
+        h1.textContent = "Hey I'm muhammad alrizky wijayanto";
+      } 
+      else if (window.innerWidth < 1025){
+        h1.textContent = "Hey I'm muhammad alrizky wijayanto";
+      }
+       else {
+        h1.textContent = "HEY I'M MUHAMMAD ALRIZKY WIJAYANTO";
+      }
+    }
+  
+    // Call the function on window resize and on page load
+    window.addEventListener('resize', updateText);
+    window.addEventListener('load', updateText);
   </script>
 </body>
 </html>
