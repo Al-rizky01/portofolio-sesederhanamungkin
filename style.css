@@ -262,7 +262,7 @@ opacity: 1;
 
 .content-home h1{
   font-size: 3rem;
-  width: 75%;
+  width: 65vw;
   margin: 0px auto;
   padding-right: 0;
 
@@ -848,6 +848,10 @@ margin-bottom: 10%;
 .social .social-item .social-link:hover {
   transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
   box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+  -moz-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+  -ms-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+  -o-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
 }
 
 .social .social-item:nth-child(1) a {
@@ -986,6 +990,54 @@ background-size: cover;
 }
 
 /*  */
+
+
+/* notifikasi */
+.success {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #84D65A;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+  
+  position: fixed; /* Tetap di tempat saat scroll */
+  top: 90%; /* Jarak dari atas halaman */
+  right: 10%; /* Jarak dari kanan halaman */
+  z-index: 1000; /* Agar di atas elemen lain */
+}
+
+.success__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.success__icon path {
+  fill: #393A37;
+}
+
+.success__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #393A37;
+}
+
+.success__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.success__close path {
+  fill: #393A37;
+}
 
 
 .card svg {
@@ -1349,20 +1401,25 @@ width: 75%;
   top: 0;
   right: 0;
   height: 100vh;
-  width: 250px;
+  width: 190px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   list-style: none;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-right: -300px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+}
+.active2{
+  margin-right: 0px;
+  transition: all 0.5s ease;
 }
 .sidebar li{
   width: 100%;
@@ -1374,27 +1431,7 @@ width: 75%;
   display: none;
 }
 
-.typing-effect {
-  font-family: monospace;
-  font-size: 20px;
-  white-space: nowrap; /* Agar teks tidak terputus ke baris baru */
-  overflow: hidden; /* Sembunyikan teks yang belum ditampilkan */
-  border-right: 2px solid; /* Menambahkan kursor seperti sedang mengetik */
-  width: 0;
-  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
-}
 
-/* Animasi mengetik */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Animasi kursor berkedip */
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
 
 .sider,.siderx{
   display: none;
@@ -1406,6 +1443,74 @@ width: 75%;
 .projek{
   margin-left: 32vw;
 }
+.desktop li > a{
+  display: none;
+}
+.menu-button{
+  display: block;
+  height: 100px;
+  width: 100px;
+  z-index: 9999999;
+  /* background-color: red; */
+  margin-left: 80%;
+  margin-top: 75px;
+  position: absolute;
+}
+.flex h2{
+  display: none;
+}
+.nav{
+
+  padding: 2.56rem 0;
+  
+}
+.toggle {
+  display: flex;
+  position: fixed;
+  /* align-items: flex-end; */
+  /* background: #ffffff00; */
+ 
+  margin-right: 0;
+  padding-right: 0;
+  transition: 0.5s ease-in-out;
+ 
+  z-index: 99999;
+  
+  left: 5vw;
+  right: 0;
+  justify-content: space-between;}
+
+  .sidebar{
+    width: 185px;
+  }
+
+  .sider{
+    display: block;
+    cursor: pointer;
+  }
+  .siderx{
+    z-index: 9999999999999999999999999999999;
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  .sidebar .side-an {
+    padding-top: 15px;
+    padding-left: 25px;
+    transition: transform 0.5s ease;
+  }
+  
+  .sidebar .side-an:hover {
+    color: #f9a813;
+    transform: translateX(20px); /* Text akan bergerak ke kanan sejauh 20px */
+  }
+  
+
+.sidebar{
+  width: 230px;
+}
+
 }
 /* Responsive for tablets (portrait) */
 @media screen and (max-width: 768px) {
@@ -1452,8 +1557,7 @@ width: 75%;
     margin-right: 0;
     padding-right: 0;
     transition: 0.5s ease-in-out;
-    width: 100px;
-    height: 100px;
+   
     z-index: 99999;
     
     left: 5vw;
@@ -1466,11 +1570,16 @@ width: 75%;
     border-radius: 50%;
     border: 2.8px solid black;}
   
+    .sidebar{
+      width: 185px;
+    }
+
     .sider{
       display: block;
       cursor: pointer;
     }
     .siderx{
+      z-index: 9999999999999999999999999999999;
       display: block;
       margin-top: 20px;
       margin-left: 10px;
