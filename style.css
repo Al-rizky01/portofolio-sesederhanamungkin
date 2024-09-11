@@ -341,7 +341,7 @@ cursor: pointer;
 
   
   animation: 
-    typing 3.5s steps(40,end),
+    typing 3.5s steps(4000,end),
     blinking 0.5s ease infinite;
 }
 
@@ -1512,7 +1512,7 @@ width: 75%;
 }
 
 }
-/* Responsive for tablets (portrait) */
+/* Responsive hp (portrait) */
 @media screen and (max-width: 768px) {
   .desktop li > a{
     display: none;
@@ -1596,6 +1596,9 @@ width: 75%;
       transform: translateX(20px); /* Text akan bergerak ke kanan sejauh 20px */
     }
     
+.contain-home {
+  padding: 25% 0px;
+}
 
     .content-home h1 {
       font-size: 2.5rem;
@@ -1604,9 +1607,9 @@ width: 75%;
       padding-right: 0;
       margin-left: -5px;
       margin-top: 150px;
-      margin-bottom: 500px;
+      margin-bottom: 200px;
   animation: 
-  typing 3.5s steps(40,end),
+  typing 3.5s steps(4000,end),
   blinking 0.5s ease infinite;
   }
   @keyframes typing{
